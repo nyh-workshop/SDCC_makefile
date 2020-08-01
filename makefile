@@ -2,11 +2,11 @@ CC = sdcc
 
 SDCC_INCLUDE = "/usr/share/sdcc/include/"
 
-CPPFLAGS = -mmcs51 -I$(SDCC_INCLUDE)
+CXXFLAGS = -mmcs51 -I$(SDCC_INCLUDE)
 
 main.ihx: main.c
         @echo "Compiling for MCS-51..."
-        $(CC) $(CPPFLAGS) main.c
+        $(CC) $(CXXFLAGS) main.c
 
 clean:
         @echo "cleaning files..."
